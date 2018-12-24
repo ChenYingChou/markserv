@@ -34,9 +34,9 @@ body .markdown-body {
 }
 
 .icon:before {
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-positiong: 50% 50%;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
     content: "";
     display: block;
     position: absolute;
@@ -48,11 +48,10 @@ body .markdown-body {
 }
 
 .icon.markdown.isfile:before {
-  -webkit-mask-image: none!important;
-  -webkit-mask-size: auto!important;
-  -webkit-mask-repeat: auto!important;
-  -webkit-mask-position: auto!important;
-
+  mask-image: none!important;
+  mask-size: auto!important;
+  mask-repeat: auto!important;
+  mask-position: auto!important;
   background-color: transparent;
   background-size: contain;
   background-position: 50% 50%;
@@ -629,4 +628,16 @@ li.icon {
   float: left;
   margin: 0.3em 0 0.25em -1.6em;
   vertical-align: middle;
+}
+.markdown-body details {
+  display: block;
+}
+.markdown-body details summary {
+  cursor: pointer;
+}
+.markdown-body summary:focus {
+  outline: none;
+}
+.markdown-body summary {
+  display: list-item;
 }
